@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+local/
+logs/
+*.log
+__pycache__/
+*.pyc
+.venv/
+local.properties
+*.jks
+*.keystore
