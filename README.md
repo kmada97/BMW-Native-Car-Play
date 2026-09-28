@@ -4,6 +4,8 @@ An experimental iPhone companion for a 2014 BMW X3 F25, retaining the factory sc
 
 **Status:** planning and bench diagnostics only. No BMW connection, Bluetooth audio or in-car integration has been validated. Current first milestone: investigate a single-device BMW USB/authentication path before buying hardware; see [single-device feasibility](docs/single-device-feasibility.md). A borrowed Android remains an optional baseline if one becomes available.
 
+Working vehicle profile: 2014 F25, assumed NBT; center-console USB and AUX confirmed by owner. Proceed with desk research while the car is serviced; Apps support and physical behavior will be tested when it returns.
+
 ## Earlier two-device reference architecture
 
 ```text

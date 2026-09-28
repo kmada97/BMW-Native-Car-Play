@@ -2,6 +2,14 @@
 
 2026-09-28. User owns neither an Android phone nor a Pi and wants to avoid buying an Android phone. Hold dedicated hardware purchases while evaluating this path. The two-device architecture remains a reference, not a confirmed requirement or the current shopping instruction.
 
+## Working vehicle profile until the car returns
+
+User confirmed 2026-09-28: center-console USB and AUX sockets. Use 2014 BMW X3 xDrive35i (F25), original display/iDrive, and NBT as the working head-unit assumption. NBT is inferred from model/year and prior recorded photo context, not conclusively identified from TN/HN/MN software fields. Do not assume exact display resolution or build options.
+
+For desk design, provisionally target an Apps-capable NBT over USB. Apps/6NR availability remains unverified; USB and AUX do not establish it. This assumption permits software/interface research now and must be tested before claiming in-car compatibility. AUX is the planned analog speaker input; concurrent Apps display/audio behavior remains untested.
+
+No additional photos or vehicle interaction are required while the car is serviced. Prioritize USB transport, authentication runtime and board device-mode feasibility now. Defer vehicle menu/options checks and physical tests until it returns. No hardware purchase or compatibility guarantee follows from these assumptions.
+
 ## Success criterion
 
 A single development device connects to the existing BMW USB port, authenticates using an available supported path, displays a minimal menu and receives knob/select/back events. No music, calls or maps are needed to pass this milestone. No such demonstration exists in this repository yet.
@@ -16,7 +24,7 @@ Read-only checkouts are in ignored local/research/. No upstream code copied into
 
 ## Work order
 
-1. Collect vehicle evidence without disassembly: main iDrive menu, ConnectedDrive submenu/Connection Assistant, map-version screen if navigation is fitted, and center-console USB/AUX sockets. Check build/options for Apps/6NR when available. These can narrow compatibility but do not prove authentication.
+1. When the car returns (not a prerequisite for desk research), collect vehicle evidence without disassembly: main iDrive menu, ConnectedDrive submenu/Connection Assistant, map-version screen if navigation is fitted, and center-console USB/AUX sockets. Check build/options for Apps/6NR when available. These can narrow compatibility but do not prove authentication.
 2. Trace the actual BMW USB path in available implementation/documentation. Determine what the accessory negotiation, BCL transport and authentication each require; mark undocumented behavior explicitly.
 3. Evaluate two single-board approaches separately: native Linux transport plus an available authentication implementation; or Android on a USB-device-capable board running the official app. For the latter, verify app installation/security-service operation, USB accessory support and Bluetooth audio receiver roles. A booting Android image is insufficient.
 4. Select hardware only after a plausible complete interface path is documented. Pi 4 remains a Linux audio bench candidate, not an approved single-box BMW bridge.
