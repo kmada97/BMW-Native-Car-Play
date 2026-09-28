@@ -1,0 +1,23 @@
+{
+  "prepared": "2026-09-28",
+  "assets": [
+    {
+      "file": "aaidrive-1.4.4.apk",
+      "url": "https://github.com/BimmerGestalt/AAIdrive/releases/download/1.4.4/androidautoidrive-1.4.4-nomap-nonalytics-full-release.apk",
+      "sha256": "ce9b16e1366407ce7914e1344017b4e96a1cfbbfea06b793b884980d8c589df3",
+      "hash_source": "GitHub release asset digest"
+    },
+    {
+      "file": "rpi-imager-v2.0.11.1.dmg",
+      "url": "https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.11.1/rpi-imager-v2.0.11.1.dmg",
+      "sha256": "2b4c5324c5ff04aa3bfb216795ae9e01cb54400752727353e13fb21e66c528a9",
+      "hash_source": "GitHub release asset digest"
+    },
+    {
+      "file": "platform-tools-darwin.zip",
+      "url": "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip",
+      "sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d",
+      "hash_source": "Local receipt hash, not independently compared with publisher checksum"
+    }
+  ]
+}

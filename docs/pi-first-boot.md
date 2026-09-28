@@ -1,6 +1,6 @@
 # Pi 4 first boot: single-device experiment
 
-Prepared 2026-09-28. No hardware has been tested. This is a reproducible bench procedure, not a ready-to-install BMW system.
+Prepared 2026-09-28. Start with [the arrival checklist](arrival.md) for staged tools and current download status. No hardware has been tested. This is a reproducible bench procedure, not a ready-to-install BMW system.
 
 ## Chosen first experiment
 
@@ -38,7 +38,7 @@ Replace YOUR_DEVICE_ID with the observed identifier, not a guessed address. Repo
 
 The Pi's USB-C port is also its power input and its USB gadget data port. Its USB-A ports are host ports. Do not connect a host-to-host USB-A cable to the car or assume BMW USB supplies Pi operating current.
 
-Bench power above deliberately uses the wall supply and network diagnostics. Simultaneous USB-C data and adequate independent power requires a specifically verified power/data arrangement with protection against backfeeding. We have not selected or validated that arrangement. Do not improvise a Y cable or bare GPIO power connection. A plain USB-A-to-C data cable is a later component, not a complete power solution.
+Bench power above deliberately uses the wall supply and network diagnostics. Simultaneous USB-C data and adequate independent power requires a specifically verified power/data arrangement with protection against backfeeding. A specific splitter candidate and bench wiring are now documented in [power/data](power-data.md); the arrangement is not hardware-validated. Do not improvise a Y cable or bare GPIO power connection. A plain USB-A-to-C data cable is a later component, not a complete power solution.
 
 Android accessory support must be observed in a live USB session before the BMW connection test. Generic USB Ethernet/MTP enumeration alone does not pass this gate.
 

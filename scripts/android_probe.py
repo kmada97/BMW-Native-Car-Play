@@ -8,6 +8,7 @@ import argparse
 import json
 import subprocess
 import sys
+from pathlib import Path
 
 PROPERTIES = {
     'model': 'ro.product.model',
@@ -56,10 +57,13 @@ def assess(checks):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    local_adb = Path(__file__).resolve().parents[1] / 'local/tools/platform-tools/adb'
+    parser.add_argument('--adb', default=str(local_adb) if local_adb.exists() else 'adb',
+                        help='ADB executable; defaults to staged tools, then PATH')
     parser.add_argument('--serial', required=True, help='Exact serial or address from adb devices')
     parser.add_argument('--details', action='store_true', help='Include private USB/media/audio dumps')
     args = parser.parse_args()
-    base = ['adb', '-s', args.serial]
+    base = [args.adb, '-s', args.serial]
     state = run(base + ['get-state'])
     if not state['ok'] or state['output'] != 'device':
         print(json.dumps({'status': 'device_unavailable', 'check': state}, indent=2))

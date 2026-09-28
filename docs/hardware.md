@@ -34,3 +34,7 @@ Sources checked 2026-09-28:
 - https://www.raspberrypi.com/products/type-c-power-supply/
 - https://github.com/raspberrypi/rpi-usb-gadget (Pi 4/5 gadget data uses USB-C)
 - https://konstakang.com/devices/rpi4/AOSP16/
+
+## Pre-arrival update (2026-09-28)
+
+User reports hardware purchased, awaiting arrival. See [arrival](arrival.md) for prepared files. A separate [USB power/data splitter candidate](power-data.md) is now identified for bench testing; no extra purchase has been made. The kit alone supports desk audio testing, not a verified BMW USB/power installation.

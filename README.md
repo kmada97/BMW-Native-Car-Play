@@ -16,6 +16,8 @@ This is a target architecture. BMW app authentication, USB/power integration, me
 
 ## Start
 
+**Pre-arrival preparation:** [arrival checklist](docs/arrival.md) lists staged Mac tools, the verified AAIdrive APK, exact first-session commands and hardware-only gates. Android image retrieval is still incomplete: the host showed a completed browser transfer, but no saved ZIP was available to verify.
+
 1. [Exact hardware list](docs/hardware.md).
 2. [Pi first boot](docs/pi-first-boot.md): image verification, setup and runtime checks.
 3. [Source findings and unresolved dependencies](docs/single-device-feasibility.md).
@@ -24,6 +26,7 @@ This is a target architecture. BMW app authentication, USB/power integration, me
 
 ## Tools prepared
 
+- `python3 scripts/check_prearrival.py`: check staged downloads; fails on missing/mismatched files.
 - `python3 scripts/verify_image.py /path/to/image.zip`: verify the pinned publisher hash; no disk writing.
 - `python3 scripts/android_probe.py --serial DEVICE_ID`: read-only inventory of an explicitly selected ADB device. Add `--details` for private runtime dumps and save under ignored `local/`.
 - `python3 scripts/bench_doctor.py`: Linux prerequisite inventory for an optional separate Linux experiment, not Android setup.
