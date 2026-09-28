@@ -1,5 +1,7 @@
 # Hardware and purchase order
 
+**Current direction (2026-09-28): hold purchases.** User has neither device and prefers a single Pi. See [single-device feasibility](single-device-feasibility.md). The staged list below describes the earlier two-device prototype, not an approved single-device shopping list.
+
 Planning date: 2026-09-28. These are prototype choices, not a proven vehicle kit. No purchases made. Costs below are rough USD planning allowances, not live retailer quotes.
 
 ## Get first: BMW compatibility test
