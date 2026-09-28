@@ -11,9 +11,9 @@ Prepared 2026-09-28. This is an experimental bench kit. No Pi or car tests have 
 
 Run `python3 scripts/check_prearrival.py` to check all staged download hashes. A missing image is a failure, never silently treated as ready. The Google tools ZIP hash is a local receipt from its official HTTPS download, not a separately published checksum.
 
-## Android image download still incomplete
+## Android image ready
 
-The official Filen link showed a completed 795.79 MB transfer in the in-app browser, but no saved ZIP could be located for checksum verification. Chrome fallback was unavailable. The image is therefore **not staged or verified**. Download the pinned image from [the publisher](https://konstakang.com/devices/rpi4/AOSP16/) into `local/downloads/`, then run the checker before flashing. No SD card has been written.
+The image was found in the Mac Documents folder on 2026-09-28. Its SHA256 matches the pinned publisher checksum, and a copy is staged at `local/downloads/AOSP16-20260428-KonstaKANG-rpi4.zip`. The original is preserved. No SD card has been written; boot and BMW compatibility remain untested.
 
 ## First desk session
 

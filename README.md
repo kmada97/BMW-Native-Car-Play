@@ -16,7 +16,7 @@ This is a target architecture. BMW app authentication, USB/power integration, me
 
 ## Start
 
-**Pre-arrival preparation:** [arrival checklist](docs/arrival.md) lists staged Mac tools, the verified AAIdrive APK, exact first-session commands and hardware-only gates. Android image retrieval is still incomplete: the host showed a completed browser transfer, but no saved ZIP was available to verify.
+**Pre-arrival preparation:** [arrival checklist](docs/arrival.md) lists staged Mac tools, the verified AAIdrive APK, exact first-session commands and hardware-only gates. The Android image has been found in Documents, verified against the pinned publisher SHA256, and copied into local/downloads. All staged download hashes pass.
 
 1. [Exact hardware list](docs/hardware.md).
 2. [Pi first boot](docs/pi-first-boot.md): image verification, setup and runtime checks.

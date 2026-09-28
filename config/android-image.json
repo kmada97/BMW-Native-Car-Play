@@ -8,7 +8,8 @@
   "source_branch": "android-16.0",
   "source_commit_inspected": "b9539c016db0e82dcc3af7c37c15924a77fbf5c1",
   "binary_source_equivalence": "Not established; inspected branch is not a reproducible manifest of the downloaded image",
-  "downloaded": false,
+  "downloaded": true,
   "boot_tested": false,
-  "bmw_tested": false
+  "bmw_tested": false,
+  "checksum_verified": true
 }
