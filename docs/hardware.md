@@ -1,46 +1,36 @@
-# Hardware and purchase order
+# Buy now: Pi 4 development kit
 
-**Current direction (2026-09-28): hold purchases.** User has neither device and prefers a single Pi. See [single-device feasibility](single-device-feasibility.md). The staged list below describes the earlier two-device prototype, not an approved single-device shopping list.
+Decision: 2026-09-28, following user's request to proceed with a Pi purchase. This supersedes earlier hold-purchases and borrowed-Android-first instructions. Recommended for prototyping; BMW compatibility is not proven.
 
-Planning date: 2026-09-28. These are prototype choices, not a proven vehicle kit. No purchases made. Costs below are rough USD planning allowances, not live retailer quotes.
-
-## Get first: BMW compatibility test
-
-| Item | Selection | Purpose |
+| Quantity | Item | Selection |
 | --- | --- | --- |
-| Borrowed/spare Android phone | Prefer a reasonably recent device that can install the current official My BMW/MINI app and AAIdrive; no SIM needed for initial Wi-Fi setup | BMW USB authentication and factory-screen/control test |
-| USB data cable | Match phone socket and actual BMW USB socket; commonly USB-A to USB-C | Data connection; charging-only cable will not work |
-| Existing iPhone and computer | Reuse what is available | Everyday source device; setup/documentation |
+| 1 | **Raspberry Pi 4 Model B, 4GB RAM** | Exact preferred board; built-in Bluetooth/Wi-Fi, analog audio and USB-C gadget-capable port |
+| 1 | Official Raspberry Pi **15W USB-C supply** | Pi 4 5.1V/3A wall supply for the desk |
+| 1 | **64GB microSD** | Reputable A1/A2 card; 32GB works for initial image, 64GB gives development room |
+| As needed | microSD reader | Compatible with the Mac's ports |
+| 1 | Pi 4 case with heatsinks and fan | Access to USB-C, micro-HDMI and audio jack |
+| 1 | **Micro-HDMI to HDMI cable** | Desk setup using an existing TV/monitor; not a vehicle screen |
+| 1 | **3.5mm stereo TRS male-to-male cable** | Pi analog output to confirmed BMW AUX, and desk speakers |
+| Existing/borrow | USB keyboard/mouse and TV/monitor | Initial Android setup; no permanent extra screen planned |
+| Optional | Second microSD, 32GB+ | Separate Linux audio experiment without overwriting Android |
+| Later | Linux/Android class-compliant USB mic | Only when starting bidirectional call tests |
 
-Do not buy a dedicated Android phone just on an Android-version claim. AAIdrive source currently declares minSdk 23, but the official app's current requirements and successful car authentication are separate constraints. Borrowing is preferable. Budget $0–15 if a phone can be borrowed.
+Purchase through [Raspberry Pi's approved-reseller selector](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/). Do not substitute a Pico, Pi 400 keyboard or Zero. A Pi 5 is capable of USB gadget mode too, but Pi 4 gives us a built-in analog output and a concrete Android device-tree target. 4GB is our development choice, not an upstream minimum (the selected Android image documents 2GB minimum).
 
-## After the BMW connection works: Linux bench kit
+Allow roughly $100–160 for board/power/storage/cooling/cables, excluding a new monitor or keyboard. This is a planning allowance, not a verified retailer quote or current stock claim. Check kit contents to avoid duplicate accessories.
 
-| Qty | Item | Recommendation / constraint |
-| --- | --- | --- |
-| 1 | Linux computer | Reuse an existing Linux machine; otherwise Raspberry Pi 4 Model B, 2GB or 4GB is a reasonable bench candidate |
-| 1 | Power supply | Official Raspberry Pi 15W USB-C supply for Pi 4 desk testing (5.1V/3A); not a vehicle supply |
-| 1 | Storage | 32GB or larger reputable microSD, plus reader if needed |
-| 1 | Case/cooling | Ventilated Pi 4 case with heatsinks; validate temperature later |
-| 1 | Audio output | Start with Pi 4's built-in 3.5mm output and stereo TRS cable if BMW AUX is confirmed; USB DAC is optional if noise/quality requires it |
-| 1 | Call-test microphone | Linux-compatible USB microphone, or existing class-compliant USB headset for bench calls |
-| Existing | Headphones or powered speaker | Prove bench output before connecting the car |
+## What this purchase gets us
 
-Pi 4 includes Bluetooth and Wi-Fi. Do not buy an extra Bluetooth dongle until testing indicates it is needed. A monitor is optional: configure network/SSH during OS imaging and administer from the existing computer. Prefer Ethernet during desk testing; decide the Pi/Android in-car local network after both endpoints work independently.
+A single-board test platform for Android-based BMW authentication/USB experiments and Bluetooth iPhone audio reception. Android runs on the Pi itself; no separate phone is on the current shopping list. Start with [Pi first boot](pi-first-boot.md).
 
-Allow roughly $100–170 for a new Pi bench setup with power, storage, case, cable and basic microphone; borrowing equipment reduces this. A dedicated Android phone and final car power hardware are additional. No exact all-in vehicle price is established.
+## Do not buy yet
 
-## Defer until integration succeeds
+MMI, replacement display, CAN/OBD adapter, CarPlay dongle, external Bluetooth dongle or GPIO power hardware. None is needed for the first desk experiment.
 
-- Vehicle accessory-socket supply delivering adequate regulated 5V current, with a documented shutdown strategy. The car's USB port is reserved for Android data and is not assumed to power the whole build.
-- Final enclosure, mounting, cooling and sleep-current testing.
-- Optional USB DAC/noise isolation only after measuring the actual audio path.
-- Dedicated Android device only after validating that exact device/app combination.
+Vehicle power is a separate unresolved selection. Pi USB-C is both the power input and the device data port; simultaneous BMW USB data and independent power needs a verified arrangement that prevents backfeeding. No Y cable or car USB power assumption is approved by this plan. Use the wall supply with Wi-Fi/Ethernet for the first boot.
 
-Do not order an MMI, display, CAN/OBD adapter, LVDS converter or USB CarPlay dongle for this prototype. MMI remains a separate fallback if the BMW app interface fails.
-
-## Sources checked
-
-- [Raspberry Pi 4 specifications](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/): board connectivity and desk setup.
-- [Official 15W supply](https://www.raspberrypi.com/products/type-c-power-supply/): 5.1V/3A specification.
-- [AAIdrive](https://github.com/BimmerGestalt/AAIdrive): vehicle/app requirements.
+Sources checked 2026-09-28:
+- https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
+- https://www.raspberrypi.com/products/type-c-power-supply/
+- https://github.com/raspberrypi/rpi-usb-gadget (Pi 4/5 gadget data uses USB-C)
+- https://konstakang.com/devices/rpi4/AOSP16/

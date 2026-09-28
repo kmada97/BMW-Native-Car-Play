@@ -1,5 +1,7 @@
 # First vehicle test — parked, no disassembly
 
+Current target is the Pi running Android; references to an Android phone below describe the optional original baseline and can be performed with the Pi only after its USB/power arrangement is verified. No separate phone purchase is planned.
+
 All results currently **NOT TESTED**. Fill in observations, not assumptions. Keep photos and private identifiers in ignored `local/`.
 
 ## Preparation

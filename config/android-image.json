@@ -1,0 +1,14 @@
+{
+  "purpose": "Unvalidated single-Pi BMW companion bench candidate",
+  "board": "Raspberry Pi 4 Model B, 4GB",
+  "image": "AOSP16-20260428-KonstaKANG-rpi4.zip",
+  "source_page": "https://konstakang.com/devices/rpi4/AOSP16/",
+  "sha256": "936882f768e25de2d1ff925e71c942682c42d2dfe2c4f33bfd307eff95979576",
+  "source_device_tree": "https://github.com/raspberry-vanilla/android_device_brcm_rpi4",
+  "source_branch": "android-16.0",
+  "source_commit_inspected": "b9539c016db0e82dcc3af7c37c15924a77fbf5c1",
+  "binary_source_equivalence": "Not established; inspected branch is not a reproducible manifest of the downloaded image",
+  "downloaded": false,
+  "boot_tested": false,
+  "bmw_tested": false
+}

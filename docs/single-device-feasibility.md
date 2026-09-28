@@ -1,6 +1,6 @@
 # Single-device feasibility — first milestone
 
-2026-09-28. User owns neither an Android phone nor a Pi and wants to avoid buying an Android phone. Hold dedicated hardware purchases while evaluating this path. The two-device architecture remains a reference, not a confirmed requirement or the current shopping instruction.
+2026-09-28. User owns neither an Android phone nor a Pi and wants to avoid buying an Android phone. As of the later 2026-09-28 purchase request, select Pi 4 Model B 4GB for bench work; this supersedes the earlier purchase hold. In-car compatibility remains unproven. The two-device architecture remains a reference, not a confirmed requirement or the current shopping instruction.
 
 ## Working vehicle profile until the car returns
 
@@ -27,7 +27,7 @@ Read-only checkouts are in ignored local/research/. No upstream code copied into
 1. When the car returns (not a prerequisite for desk research), collect vehicle evidence without disassembly: main iDrive menu, ConnectedDrive submenu/Connection Assistant, map-version screen if navigation is fitted, and center-console USB/AUX sockets. Check build/options for Apps/6NR when available. These can narrow compatibility but do not prove authentication.
 2. Trace the actual BMW USB path in available implementation/documentation. Determine what the accessory negotiation, BCL transport and authentication each require; mark undocumented behavior explicitly.
 3. Evaluate two single-board approaches separately: native Linux transport plus an available authentication implementation; or Android on a USB-device-capable board running the official app. For the latter, verify app installation/security-service operation, USB accessory support and Bluetooth audio receiver roles. A booting Android image is insufficient.
-4. Select hardware only after a plausible complete interface path is documented. Pi 4 remains a Linux audio bench candidate, not an approved single-box BMW bridge.
+4. Use the selected Pi 4 4GB for Android bench experiments. Treat it as development hardware, not a validated BMW bridge.
 5. Bench-test enumeration/transport, then test a minimal authenticated menu on the parked car. If neither approach has a viable authentication/transport path, reconsider a borrowed phone for diagnosis or the previously discussed MMI fallback with the user.
 
 ## Open dependencies
@@ -44,3 +44,22 @@ Sources:
 - https://github.com/BimmerGestalt/BclCarLink/tree/7cfd959bba8a742345913c5ce6c5c179c351e189
 - https://github.com/BimmerGestalt/IDriveConnectKitAndroid/tree/4a567bc0557bf20a19c0fc03a39fcba69a333ea2
 - https://source.android.com/docs/core/interaction/accessories/aoa
+
+## New source evidence: single-Pi Android candidate
+
+Inspected Raspberry Vanilla `android-16.0` device tree at commit `b9539c016db0e82dcc3af7c37c15924a77fbf5c1`:
+
+- `vendor.prop`: enables A2DP sink and AVRCP controller; chooses analog jack. This is stronger evidence than generic Android-phone behavior, which should not be applied to this board configuration.
+- `overlay/BluetoothRpiOverlay/res/values/config.xml`: requests audio focus/AVRCP updates for the receiver.
+- `device.mk`: includes the Android USB accessory feature declaration.
+- `ramdisk/init.rpi4.usb.rc`: creates accessory.gs2.
+- `usb/UsbGadgetUtils.cpp`: handles ACCESSORY and links accessory.gs2.
+- General configuration enables HFP AG; this does NOT establish the HFP client role needed for iPhone calls. Automotive product configuration differs and has not been selected/tested.
+
+This establishes a plausible software target, not a successful BMW session. Selected published bench image is KonstaKANG AOSP16-20260428 for Pi 4. Its exact equivalence to the inspected source revision is not established; first boot diagnostics must confirm runtime behavior.
+
+IDriveConnectKitAndroid additionally has SecurityModuleManager, which loads the official installed app's security module via Android package context/class loader. This is a reason to keep Android on the Pi, not evidence we can simply run the module on native Linux.
+
+Remaining gates: official app availability/installation on this image; security-module operation; actual AOA/BMW transport; Apps capability on car; Bluetooth media-session availability to AAIdrive; simultaneous USB data/power design; headless boot; call role/audio handling. These cannot be closed by source inspection alone.
+
+Source: https://github.com/raspberry-vanilla/android_device_brcm_rpi4/tree/b9539c016db0e82dcc3af7c37c15924a77fbf5c1

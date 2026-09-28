@@ -1,5 +1,7 @@
 # Development milestones
 
+**Current route:** Android on Pi 4 4GB is the first single-device candidate; follow [Pi first boot](pi-first-boot.md). The Linux plus Android split below is retained as earlier architecture research, not the current installation sequence. No custom BMW/media adapter is implemented yet.
+
 ## 1. Prove the BMW endpoint
 
 Run upstream AAIdrive unchanged before attempting a custom Android fork. Current upstream source has minSdk 23, compileSdk 35 and targetSdk 36 (inspected 2026-09-28); these are observations, not a pinned working toolchain. Official app authentication remains mandatory. Read upstream build files together with the developer guide, which may lag source. Record a commit SHA when beginning implementation. No Android build performed yet.
