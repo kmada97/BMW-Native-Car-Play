@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "status": "adapter_candidate;12synthetic_contract_tests_pass;no_real_identity_or_phone_authentication",
+  "runtime": "Python3.10+standard_library",
+  "trusted_identity_created": false,
+  "real_broker_contacted": false,
+  "server_left_running": false,
+  "sources": {
+    "showcase/source/baa_broker.h": {
+      "url": "https://github.com/amineross/showcase/blob/68b0fe54483031353184258577f3d42de4dd313c/source/baa_broker.h",
+      "sha256": "1f53a86f4e89935091c9da5dc5c62ace0feebe4452330a36c8adb30ac83682b7"
+    },
+    "showcase/source/carplay_services.m": {
+      "url": "https://github.com/amineross/showcase/blob/68b0fe54483031353184258577f3d42de4dd313c/source/carplay_services.m",
+      "sha256": "2871a14b3988d2e4b5c05d8841a96395fa103f259d1dc54f30ef8f5dbf70f867"
+    },
+    "xcertplay/shared/src/main/java/com/shilapi/xcertplay/mfi/RemoteMfiAuthenticationClient.kt": {
+      "url": "https://github.com/shilapi/xcertplay/blob/8b01399a17ef8b3193931a2ff4ed93b410a73570/shared/src/main/java/com/shilapi/xcertplay/mfi/RemoteMfiAuthenticationClient.kt",
+      "sha256": "ea3d3a560551644266e6c7489012a655bd5fc9d47ca2bafa68a853d07b3a1b92"
+    }
+  },
+  "implementation_sha256": {
+    "adapter.py": "59a30fa289084a01969cc7637e3206950243c89258b444681b9c3f9f4329e67e",
+    "tests/test_adapter.py": "eda6f5b511134c31e33d9107acca587a5a47c6f7dcf8f86f3d68ab333ff9e94e",
+    "README.md": "3c32e142d8a2573557631166d5ddfb23c36eff1a4d98e973361c91a20b9f59c5"
+  },
+  "test_command": "python3 -m unittest discover -s apps/bmw-carplay-auth/tests -v",
+  "test_count": 12
+}

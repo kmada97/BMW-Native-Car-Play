@@ -1,0 +1,30 @@
+{
+  "idriveconnectkit-jvm-0.8.jar": {
+    "url": "https://jitpack.io/io/bimmergestalt/idriveconnectkit/idriveconnectkit-jvm/0.8/idriveconnectkit-jvm-0.8.jar",
+    "sha256": "4b618a86139c89f33276e411fd2e323fff5575e9013920e2da0c8efe045411c1"
+  },
+  "idriveconnectkit-etch-0.8.jar": {
+    "url": "https://jitpack.io/io/bimmergestalt/idriveconnectkit/idriveconnectkit-etch/0.8/idriveconnectkit-etch-0.8.jar",
+    "sha256": "b278f7054ae45092dff10472fb324aca515ce749149e187904f1a1d53bd7d4dd"
+  },
+  "etch-runtime-0.8.jar": {
+    "url": "https://jitpack.io/io/bimmergestalt/idriveconnectkit/etch-runtime/0.8/etch-runtime-0.8.jar",
+    "sha256": "c6c01f55c7dfbe6ad43560f7dbb317cc37333aa5e63bd3d1d3115390a2977356"
+  },
+  "IDriveConnectKitAndroid-0.7.aar": {
+    "url": "https://jitpack.io/io/bimmergestalt/IDriveConnectKitAndroid/0.7/IDriveConnectKitAndroid-0.7.aar",
+    "sha256": "c0880399b06ed8216b560947a1f62c027bc65683375231be74aadecc6dc4ef56"
+  },
+  "kotlin-stdlib-1.9.20.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.20/kotlin-stdlib-1.9.20.jar",
+    "sha256": "28a35bcdff46d864f80f346a617e486284b208d17378c41900dfb1de95a90e6c"
+  },
+  "bcmail-jdk16-1.46.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcmail-jdk16/1.46/bcmail-jdk16-1.46.jar",
+    "sha256": "e59618b9287f07ec1944e2a2520d76239a28dfe1983fd123d7ef14d9cd3982c4"
+  },
+  "bcprov-jdk16-1.46.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk16/1.46/bcprov-jdk16-1.46.jar",
+    "sha256": "10ef7403392d4cda22b200a7a9a620dc258b5aa6a56d24a2fea468e324dab2c9"
+  }
+}

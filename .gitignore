@@ -11,3 +11,12 @@ __pycache__/
 local.properties
 *.jks
 *.keystore
+
+# Generated builds, diagnostic evidence and device-specific artifacts
+outputs/
+*.apk
+*.idsig
+*.pem
+*.key
+# Stray local shell output
+/-[ ]
